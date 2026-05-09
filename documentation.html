@@ -72,12 +72,25 @@
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo" style="text-decoration:none;">SideScribe</a>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="#" class="btn-pill">Install Now</a>
-    </div>
-  </nav>
+  
+  <div style="display: flex; align-items: center; gap: 12px;" class="nav-logo">
+  <img style="width: 50px; display: block;" src="icon.svg" alt="">
+  SideScribe
+</div>
+  <div class="nav-links" id="navLinks">
+    <!-- <a href="#how-it-works">How it works</a> -->
+    <a href="index.html">Home</a>
+    
+  </div>
+  
+  <div class="nav-actions">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <a href="#pricing" class="btn-pill">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Install Free
+    </a>
+  </div>
+</nav>
 
   <div class="docs-container">
     <aside class="docs-sidebar">
@@ -132,7 +145,7 @@
 
   <footer>
     <div class="footer-logo">SideScribe</div>
-    <p>© 2024 SideScribe. All rights reserved.</p>
+    <p>© 2026 SideScribe. All rights reserved.</p>
   </footer>
 
 </body>
