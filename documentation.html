@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation | SideScribe</title>
+  <link rel="icon" type="image/svg+xml" href="/icon.svg">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .docs-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 120px auto 80px;
+      padding: 0 24px;
+    }
+
+    /* Sidebar Navigation */
+    .docs-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    .docs-nav-group { margin-bottom: 32px; }
+    .docs-nav-group h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--sky2);
+      margin-bottom: 16px;
+    }
+
+    .docs-nav-group ul { list-style: none; }
+    .docs-nav-group li { margin-bottom: 12px; }
+    .docs-nav-group a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    .docs-nav-group a:hover { color: var(--text); }
+
+    /* Content Area */
+    .docs-content { min-width: 0; } /* Fixes text overflow in flex/grid */
+    .docs-content h1 { font-size: 48px; margin-bottom: 24px; }
+    .docs-content h2 { font-size: 28px; margin-top: 48px; margin-bottom: 16px; color: var(--text); }
+    .docs-content p { color: var(--muted); margin-bottom: 20px; line-height: 1.8; }
+    
+    /* Code Blocks */
+    .code-block {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      font-family: 'monospace';
+      font-size: 14px;
+      color: var(--violet);
+      margin: 24px 0;
+      overflow-x: auto; /* Scroll code if too long */
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 992px) {
+      .docs-container { grid-template-columns: 1fr; }
+      .docs-sidebar { display: none; } /* Or move to top as a menu */
+      .docs-content h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo" style="text-decoration:none;">SideScribe</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#" class="btn-pill">Install Now</a>
+    </div>
+  </nav>
+
+  <div class="docs-container">
+    <aside class="docs-sidebar">
+      <div class="docs-nav-group">
+        <h4>Getting Started</h4>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#quickstart">Quick Start</a></li>
+        </ul>
+      </div>
+      <div class="docs-nav-group">
+        <h4>Features</h4>
+        <ul>
+          <li><a href="#highlighting">Smart Highlighting</a></li>
+          <li><a href="#exporting">Export Options</a></li>
+          <li><a href="#shortcuts">Keyboard Shortcuts</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <main class="docs-content">
+      <section id="introduction">
+        <h1>Documentation</h1>
+        <p>Welcome to the SideScribe documentation. SideScribe is a browser extension designed to help researchers, students, and writers capture and organize information without leaving their browser tab.</p>
+      </section>
+
+      <section id="installation">
+        <h2>Installation</h2>
+        <p>Currently, SideScribe is available for Chrome and Brave browsers. To install the extension:</p>
+        <div class="code-block">
+          1. Visit the Chrome Web Store<br>
+          2. Search for "SideScribe"<br>
+          3. Click "Add to Chrome"
+        </div>
+      </section>
+
+      <section id="quickstart">
+        <h2>Quick Start</h2>
+        <p>Once installed, look for the SideScribe icon in your extension toolbar. Pin it for easy access.</p>
+        <div class="note-block">
+          <strong>Tip:</strong> You can open the SideScribe sidebar anytime by pressing <kbd>Alt</kbd> + <kbd>S</kbd>.
+        </div>
+      </section>
+
+      <section id="highlighting">
+        <h2>Smart Highlighting</h2>
+        <p>Simply select any text on a webpage. A small floating SideScribe button will appear. Click it to instantly save the highlight to your active project.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-logo">SideScribe</div>
+    <p>© 2024 SideScribe. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

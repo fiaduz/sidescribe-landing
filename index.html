@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SideScribe — Browser Note-Taking, Reimagined</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  
+  <div style="display: flex; align-items: center; gap: 12px;" class="nav-logo">
+  <img style="width: 50px; display: block;" src="/icon.svg" alt="">
+  SideScribe
+</div>
+  <div class="nav-links" id="navLinks">
+    <!-- <a href="#how-it-works">How it works</a> -->
+    <a href="documentation.html">Docs</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#legal">Legal</a>
+  </div>
+  
+  <div class="nav-actions">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <a href="#pricing" class="btn-pill">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Install Free
+    </a>
+  </div>
+</nav>
+  <!-- <nav>
+    <img style="width: 100px;" src="/logo.svg" alt="">
+    <a href="#features">Features</a>
+    <a href="documentation.html">Docs</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#legal">Privacy</a>
+    <a href="#legal">Terms</a>
+    <a href="#legal">Refunds</a>
+  </nav> -->
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="badge">
+    <div class="badge-dot"></div>
+    Built for Chrome · Manifest V3
+  </div>
+  <h1>The Side Panel That<br><span class="hl">Actually Works</span></h1>
+  <p class="hero-sub">Highlight any text on any website, capture it instantly to your side panel, and export polished DOCX, PDF, or TXT notes — without ever switching tabs.</p>
+  <div class="hero-cta">
+    <a href="#pricing" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg>
+      Add to Chrome — Free
+    </a>
+    <a href="#demo" class="btn-ghost">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      Watch demo
+    </a>
+  </div>
+
+  <!-- SCREENSHOT MOCKUP -->
+  <div class="hero-visual">
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <div class="dot-row">
+          <div class="dot r"></div>
+          <div class="dot y"></div>
+          <div class="dot g"></div>
+        </div>
+        <div class="url-bar">chrome-extension · sidescribe.dev</div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <div class="browser-body">
+        <!-- SCREENSHOT SLOT (Left — main page) -->
+        <div class="page-area">
+          <div class="page-article-title">The Future of Browser Research</div>
+          <div class="page-line w90"></div>
+          <div class="page-line w75"></div>
+          <div class="page-line w85"></div>
+          <div class="highlight-zone">
+            "Researchers spend 40% of their time re-reading and reorganising notes across multiple tabs and apps — SideScribe eliminates that entirely."
+            <button class="add-btn">+</button>
+          </div>
+          <div class="page-line w90"></div>
+          <div class="page-line w60"></div>
+          <div class="page-line w75"></div>
+          <!-- Screenshot placeholder -->
+      <div style="margin-top:18px; background: rgba(56,189,248,0.06); border:1px dashed rgba(56,189,248,0.2); border-radius:10px; padding:16px; text-align:center;">
+    <div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-family:'Syne',sans-serif;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">Screenshot Preview</div>
+    <div style="font-size:12px;color:#475569;font-style:italic;">
+        <img src="/UI full.png" alt="" style="max-width: 100%; height: auto; border-radius: 4px;">
+    </div>
+    <div style="margin-top:10px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(56,189,248,0.4)" stroke-width="1.5" style="display:inline-block;">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <path d="M21 15l-5-5L5 21"/>
+        </svg>
+    </div>
+</div>
+        </div>
+        <!-- SIDE PANEL (Right) -->
+        <div class="panel-area">
+          <div class="panel-header">
+            <div class="panel-title">SideScribe</div>
+            <div class="panel-badges">
+              <div class="chip">3 notes</div>
+            </div>
+          </div>
+          <div class="panel-content">
+            <div class="note-block">
+              "Researchers spend 40% of their time re-reading and reorganising notes..."
+            </div>
+            <div class="note-block">
+              Key stat: Productivity up 2.3× when using contextual notes.
+            </div>
+            <div class="note-typed">
+             Export to DOCX, PDF, or TXT with one click — perfectly formatted and ready to share.
+            </div>
+          </div>
+          <div class="panel-toolbar">
+            <button class="toolbar-btn docx">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              DOCX
+            </button>
+            <button class="toolbar-btn pdf">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h1l1 4 1.5-3 1.5 3L16 13h1"/></svg>
+              PDF
+            </button>
+            <button class="toolbar-btn txt">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h8"/></svg>
+              TXT
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO DEMO -->
+<section class="video-section" id="demo">
+  <div class="divider"></div>
+  <div style="height:64px;"></div>
+  <span class="section-eyebrow">See it in action</span>
+  <h2 class="section-title">From Highlight to Export<br>in Under 3 Seconds</h2>
+  <p class="section-sub">Watch how effortlessly SideScribe captures and organises your research.</p>
+
+  <div class="video-wrapper" id="videoWrapper">
+    <!-- VIDEO GOES HERE — replace src with your actual video file or YouTube embed -->
+    <video id="demoVideo" controls poster="" style="display:none;">
+      <source src="/ad1.mp4" type="video/mp4">
+    </video>
+    <div class="video-placeholder" id="videoPlaceholder">
+      <button class="play-btn" onclick="playVideo()">
+        <div class="play-triangle"></div>
+      </button>
+      <div class="video-label">Watch the demo</div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="steps-section" id="how-it-works">
+  <div style="text-align:center;">
+    <span class="section-eyebrow">How it works</span>
+    <h2 class="section-title">Three steps.<br>Zero friction.</h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <span class="step-icon">🖱️</span>
+      <h3>Highlight & Click Add+</h3>
+      <p>Select any text on any webpage. A floating "Add+" button appears — one click drops it directly into your side panel.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <span class="step-icon">✏️</span>
+      <h3>Organise & Annotate</h3>
+      <p>Reorder your captures, add personal notes, or delete what you don't need. Your editor lives right in the browser.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <span class="step-icon">📤</span>
+      <h3>Export in One Click</h3>
+      <p>Download a professionally formatted DOCX, PDF, or plain TXT file instantly — ready to share, submit, or archive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div style="text-align:center;">
+    <span class="section-eyebrow">Everything you need</span>
+    <h2 class="section-title">Built for serious<br>researchers & writers</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature-tile">
+      <div class="feature-icon">⚡</div>
+      <h3>Instant Capture</h3>
+      <p>Highlight any text on any site — Wikipedia, news articles, PDFs, research papers — and capture it with a single click.</p>
+      <span class="feature-tag">Smart Insert</span>
+    </div>
+    <div class="feature-tile">
+      <div class="feature-icon">📄</div>
+      <h3>Pro Document Export</h3>
+      <p>Export to DOCX with formatted headings, PDF with clean layouts, or TXT for maximum portability. Always polished.</p>
+      <span class="feature-tag">DOCX · PDF · TXT</span>
+    </div>
+    <div class="feature-tile">
+      <div class="feature-icon">🔒</div>
+      <h3>100% Private</h3>
+      <p>Zero data collection. Notes live in your browser's local storage only — never sent to any server, ever.</p>
+      <span class="feature-tag">Local First</span>
+    </div>
+    <div class="feature-tile">
+      <div class="feature-icon">🌙</div>
+      <h3>Side Panel Native</h3>
+      <p>Built on Chrome's Manifest V3 Side Panel API. Always accessible, never overlapping your content, blazing fast.</p>
+      <span class="feature-tag">Chrome MV3</span>
+    </div>
+    <div class="feature-tile">
+      <div class="feature-icon">✏️</div>
+      <h3>Inline Rich Editor</h3>
+      <p>Mix captured text with your own typed notes. Bold, italics, and basic formatting — no markdown needed.</p>
+      <span class="feature-tag">Built-in Editor</span>
+    </div>
+    <div class="feature-tile">
+      <div class="feature-icon">♾️</div>
+      <h3>Unlimited Exports</h3>
+      <p>Pro users get unlimited DOCX and PDF exports, lifetime updates, and priority support. Pay once, use forever.</p>
+      <span class="feature-tag">One-Time Payment</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <span class="section-eyebrow">Pricing</span>
+  <h2 class="section-title">One price.<br>Everything unlocked.</h2>
+  <p class="section-sub">No subscriptions. No feature gating. Pay once and own it.</p>
+
+  <div class="pricing-card">
+    <div style="margin-bottom:6px;">
+      <span style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.08em;color:var(--sky2);text-transform:uppercase;">Pro</span>
+    </div>
+    <div class="price-amount">$5</div>
+    <div class="price-label">One-time payment · No subscription</div>
+    <ul class="pricing-list">
+      <li><span class="check">✓</span> Unlimited DOCX Exports</li>
+      <li><span class="check">✓</span> Unlimited PDF Exports</li>
+      <li><span class="check">✓</span> Unlimited TXT Exports</li>
+      <li><span class="check">✓</span> Lifetime Updates Included</li>
+      <li><span class="check">✓</span> Priority Email Support</li>
+      <li><span class="check">✓</span> Instant Activation — No account needed</li>
+    </ul>
+    <a href="#" class="btn-primary" style="width:100%;justify-content:center;font-size:16px;padding:16px;">
+      Get Pro Access — $5
+    </a>
+    <p style="font-size:12px;color:var(--muted);margin-top:16px;">Instant unlock · No refunds on digital goods after activation · Support within 7 days</p>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="legal-section" id="legal">
+  <div style="text-align:center;">
+    <span class="section-eyebrow">Policies</span>
+    <h2 class="section-title">Legal & Policies</h2>
+    <p class="section-sub" style="margin:12px auto 0;font-size:15px;">Everything you need to know before purchasing.</p>
+  </div>
+
+  <div class="legal-accordion">
+    <div class="legal-item open">
+      <div class="legal-head" onclick="toggleLegal(this)">
+        <h3>🔒 Privacy Policy</h3>
+        <span class="legal-arrow">▼</span>
+      </div>
+      <div class="legal-body">
+        SideScribe respects your privacy completely. We do not collect, store, transmit, or sell your personal data, browsing history, or note contents. All notes are stored locally on your device within your browser's local storage — they never leave your machine. No analytics, no tracking, no third-party data sharing.
+      </div>
+    </div>
+    <div class="legal-item">
+      <div class="legal-head" onclick="toggleLegal(this)">
+        <h3>💳 Refund & Cancellation Policy</h3>
+        <span class="legal-arrow">▼</span>
+      </div>
+      <div class="legal-body">
+        Due to the instant digital nature of SideScribe Pro, we generally do not offer refunds once Pro features have been activated. However, if you experience technical issues that prevent normal use, please contact our support within 7 days of purchase and we will work to resolve the issue or offer a resolution. Chargebacks for activated licenses will be disputed.
+      </div>
+    </div>
+    <div class="legal-item">
+      <div class="legal-head" onclick="toggleLegal(this)">
+        <h3>📦 Shipping & Delivery Policy</h3>
+        <span class="legal-arrow">▼</span>
+      </div>
+      <div class="legal-body">
+        SideScribe is a 100% digital software product. Upon successful payment, your Pro features are unlocked instantly within the Chrome extension associated with your purchase. No physical product is shipped. No download is required beyond the initial extension installation from the Chrome Web Store.
+      </div>
+    </div>
+    <div class="legal-item">
+      <div class="legal-head" onclick="toggleLegal(this)">
+        <h3>📜 Terms & Conditions</h3>
+        <span class="legal-arrow">▼</span>
+      </div>
+      <div class="legal-body">
+        By using SideScribe, you agree to use the tool solely for lawful personal or professional note-taking purposes. You agree not to use SideScribe for illegal data scraping, copyright infringement, or harvesting content from sites that prohibit it. SideScribe is provided "as is" without warranty. We are not responsible for data loss resulting from browser storage clearing, extension uninstall, or device failure. Back up important notes before clearing browser data.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+  <span class="section-eyebrow">Support</span>
+  <h2 class="section-title" style="font-size:clamp(24px,3vw,40px);">Get in touch</h2>
+  <p style="color:var(--muted);font-size:15px;margin-top:8px;">We're here to help. Usually respond within 24 hours.</p>
+  <div class="contact-cards">
+    <div class="contact-card">
+      <div class="label">Email Support</div>
+      <div class="value">fiaduzzaman2014@gmail.com</div>
+    </div>
+    <div class="contact-card">
+      <div class="label">Location</div>
+      <div class="value" style="color:var(--muted);">India</div>
+    </div>
+    <div class="contact-card">
+      <div class="label">Response Time</div>
+      <div class="value" style="color:var(--muted);">Within 24–48 hours</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">SideScribe</div>
+  <p>© 2026 SideScribe. All rights reserved.</p>
+
+</footer>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-content">
+    <div class="modal-glow"></div>
+    <div class="badge">
+      <div class="badge-dot"></div>
+      Coming Soon
+    </div>
+    <h2>Launching Soon</h2>
+    <p>SideScribe is currently under review. We will be live on the <strong>Chrome Web Store</strong> very shortly!</p>
+    <button class="btn-primary" onclick="closeModal()">Got it</button>
+  </div>
+</div>
+<script src="sript.js"></script>
+
+
+
+</body>
+</html>
